@@ -1,7 +1,46 @@
 package main
 
+import "fmt"
+
 func main() {
-	romanToInt("MCMXCIV")
+	// romanToInt("MCMXCIV")
+	strs := []string{"flower", "fl", "flight"}
+	longestCommonPrefix(strs)
+}
+
+func longestCommonPrefix(strs []string) string {
+
+	i := 0
+	b := false
+	var str string
+	// var str string
+	for {
+		var code string
+		var waitCompare string
+		for k, word := range strs {
+			if k == 0 {
+				waitCompare = string(word[i])
+			} else {
+				if len(word) <= i {
+					b = true
+					break
+				}
+				code = string(word[i])
+				if code != waitCompare {
+					b = true
+					break
+				}
+			}
+		}
+		if b {
+			break
+		}
+		waitCompare = code
+		str += waitCompare
+		i++
+	}
+	fmt.Println("str:", str)
+	return str
 }
 
 func romanToInt(s string) int {
