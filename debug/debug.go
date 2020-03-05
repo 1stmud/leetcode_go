@@ -2,11 +2,14 @@ package main
 
 import "fmt"
 
-func main() {
-	// romanToInt("MCMXCIV")
-	strs := []string{"flower", "fl", "flight"}
-	longestCommonPrefix(strs)
-}
+// func main() {
+// 	// romanToInt("MCMXCIV")
+// 	// strs := []string{"flower", "fl", "flight"}
+// 	// longestCommonPrefix(strs)
+// 	nums := []int{1, 1, 2, 3, 3}
+
+// 	fmt.Println(removeDuplicates(nums))
+// }
 
 func longestCommonPrefix(strs []string) string {
 
