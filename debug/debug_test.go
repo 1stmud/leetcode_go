@@ -6,10 +6,13 @@ import (
 )
 
 func Test_main(t *testing.T) {
-	nums := []int{1, 1, 2, 3, 3}
-	d := 2
+
+	nums := []int{3, 2, 2, 3}
+	d := 3
+
 	a := removeElement(nums, d)
 	fmt.Println("ssss", a)
+	fmt.Print(nums)
 }
 
 func removeElement(nums []int, val int) int {
@@ -20,14 +23,12 @@ func removeElement(nums []int, val int) int {
 	i := 0
 	for j := 0; j < len(nums); j++ {
 		if nums[j] != val {
-			nums = append(nums[i], nums[j])
+			nums[i] = nums[j]
 			i++
 		}
 	}
-
-	fmt.Print(nums)
-	fmt.Print(i)
 	return i
+
 }
 
 func removeDuplicates(nums []int) int {

@@ -13,14 +13,12 @@ func removeElement(nums []int, val int) int {
 	i := 0
 	for j := 0; j < len(nums); j++ {
 		if nums[j] != val {
-			nums=appends
+			nums[i] = nums[j]
 			i++
 		}
 	}
-
-	fmt.Print(nums)
-	fmt.Print(i)
 	return i
+
 }
 // @lc code=end
 
